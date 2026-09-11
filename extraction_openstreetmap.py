@@ -45,10 +45,10 @@ result = response.json()
 # Print the retrieved OpenStreetMap data in a readable JSON format with an indentation of 2 spaces.
 # indent=2 makes the output more human-readable by adding line breaks and indentation.
 print(json.dumps(result, indent=2))
-temps = time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime())
+# temps = time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime())
 
 # Save the retrieved data to a JSON file named "extracted_data_<timestamp>.json" in the current working directory.
-with open(f"extracted_data_{temps}.json", "w", encoding="utf-8") as f:
+with open(f"extracted_data_bbox_example.json", "w", encoding="utf-8") as f:
     json.dump(result, f, ensure_ascii=False, indent=2)
-print(f"Data saved to extracted_data_{temps}.json")
-print(os.path.abspath(f"extracted_data_{temps}.json"))
+print(f"Data saved to extracted_data_bbox_example.json")
+print(os.path.abspath(f"extracted_data_bbox_example.json"))
