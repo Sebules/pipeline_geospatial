@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: pipeline_geospatial
+    description: database for geospatial data
+    schema: raw
+    tables:
+      - name: extracted_geo_data
+        description: retrieved OpenStreetMap data in a readable JSON format
+
+
+    
