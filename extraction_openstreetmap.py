@@ -8,7 +8,7 @@ import requests
 url = "https://overpass-api.de/api/interpreter"
 
 # Define the Overpass QL query to retrieve ways within a specific bounding box.
-# Bounding box coordinates: (south, west, north, east) correspond to the area of interest.
+# [bbox:30.618338,-96.323712,30.591028,-96.330826] Bounding box coordinates: (south, west, north, east) correspond to the area of interest.
 # Coordinates are in the format: (latitude, longitude)
 # south is the minimum latitude, west is the minimum longitude, north is the maximum latitude, and east is the maximum longitude.
 # out:json specifies that the output format should be JSON.
@@ -17,11 +17,11 @@ url = "https://overpass-api.de/api/interpreter"
 # way(30.626917110746, -96.348809105664, 30.634468750236, -96.339893442898) defines a specific way to retrieve based on its coordinates.
 # out geom specifies that the output should include the geometry of the ways.
 query = """
-  [bbox:30.618338,-96.323712,30.591028,-96.330826] 
+  
   [out:json]
   [timeout:90]
   ;
-  way(30.626917110746, -96.348809105664, 30.634468750236, -96.339893442898);
+  way(48.90102, 2.32236, 48.95071, 2.39068);
   out geom;
 """
 # Send a POST request to the Overpass API with the defined query and appropriate headers.
